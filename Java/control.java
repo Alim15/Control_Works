@@ -21,9 +21,7 @@ public class ToyStore {
     private PriorityQueue<Toy> toyQueue;
 
     public ToyStore() {
-        toyQueue = new PriorityQueue<>((t1, t2) -> t2.frequency - t1.frequency); // От наибольшей частоты к наименьшей
-    }
-
+        toyQueue = new PriorityQueue<>((t1, t2) -> t2.frequency - t1.frequency);
     public void put(int id, String name, int frequency) {
         Toy toy = new Toy(id, name, frequency);
         toyQueue.add(toy);
